@@ -18,8 +18,8 @@ import static android.content.ContentValues.TAG;
 public class Request {
     private URL mURL;
 
-    public Request() throws MalformedURLException {
-        String baseUrl = "https://www.googleapis.com/books/v1/volumes?q=teste&maxResults=15";
+    public Request(String query) throws MalformedURLException {
+        String baseUrl = "https://www.googleapis.com/books/v1/volumes?q=" + query + "&maxResults=15";
 
         mURL = new URL(baseUrl);
     }

@@ -18,9 +18,11 @@ import static android.content.ContentValues.TAG;
  */
 
 public class URLAsyncTaskLoader extends AsyncTaskLoader<List<Info>> {
+    private String mQuery = "";
 
-    public URLAsyncTaskLoader(Context context) {
+    public URLAsyncTaskLoader(Context context, String query) {
         super(context);
+        mQuery = query;
     }
 
     @Override
@@ -28,7 +30,7 @@ public class URLAsyncTaskLoader extends AsyncTaskLoader<List<Info>> {
         List<Info> responseListInfo = null;
 
         try {
-            Request request = new Request();
+            Request request = new Request(mQuery);
             String getDataURL = request.getInfoInURL();
 
             Parse parse;

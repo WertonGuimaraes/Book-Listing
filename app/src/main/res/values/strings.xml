@@ -2,5 +2,6 @@
     <string name="app_name">Book Listing</string>
 
     <string name="no_connection">No connection</string>
-    <string name="no_data_found">No data found.</string>
+    <string name="no_data_found">No data found. Click in the search button and fill with any valid name.</string>
+    <string name="search">Search</string>
 </resources>
